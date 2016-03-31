@@ -1,0 +1,8 @@
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\bin\Debug\Bubble.exe.config
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\bin\Debug\Bubble.exe
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\bin\Debug\Bubble.pdb
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\obj\Debug\Bubble.Form1.resources
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\obj\Debug\Bubble.Properties.Resources.resources
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\obj\Debug\Bubble.csproj.GenerateResource.Cache
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\obj\Debug\Bubble.exe
+C:\Users\Emanuel.Umbelino\Desktop\Bubble\Bubble\obj\Debug\Bubble.pdb
