@@ -27,6 +27,7 @@ namespace Bubble
                 finished1 = false;
                 chart1.Series.Clear();
                 comparisons1 = 0;
+                backgroundWorker1 = new Thread(DrawGraph1);
                 backgroundWorker1.IsBackground = true;
                 backgroundWorker1.Start();
 
@@ -37,7 +38,38 @@ namespace Bubble
         {
             Start();
         }
-      
+        private void DrawGraph1()
+        {
+            this.Invoke(new MethodInvoker(() =>
+            {
+                chart1.Series.Add("Execution: ");
+                chart1.Series[0].IsVisibleInLegend = false;
+                chart1.Series[0].ChartType = SeriesChartType.Column;
+                chart1.Series[0].Points.Clear();
+            }));
+
+            valueToRand1 = int.Parse(numericUpDown1.Value.ToString());
+            int[] data = GenerateArray(valueToRand1);
+            for (int k = 0; k < data.Length; k++)
+            {
+                this.Invoke(new MethodInvoker(() =>
+                {
+                    chart1.Series[0].Points.AddXY(k, data[k]);
+                }));
+            }
+    
+             BubbleSort(data, 1);
+
+            for (int k = 0; k < data.Length; k++)
+            {
+                this.Invoke(new MethodInvoker(() =>
+                {
+                    chart1.Series[0].Points[k].Color = Color.Green;
+                }));
+            }
+
+            finished1 = true;
+        }
         private void BubbleSort(int[] data, int myThread)
         {
             for (int i = data.Length - 1; i >= 1; i--)
